@@ -1,10 +1,13 @@
 const express = require("express");
-
+const cors = require("cors");
 const { sequelize } = require("./models");
 const letterRouter = require("./routes/letterRouter");
 
 const app = express();
+app.use(cors());
+
 app.set("port", process.env.PORT || 5000);
+
 
 sequelize
   .sync({ force: false })
