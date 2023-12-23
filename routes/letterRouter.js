@@ -6,7 +6,6 @@ const router = express.Router();
 //db에 저장
 router.post("/letter", async (req,res) => {
     console.log(req.body.writer);
-    console.log(req.body.recipient);
     try {
         const newLetter = {
             // letternum: req.body.LetterNum,
